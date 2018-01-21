@@ -7,7 +7,6 @@
 import random
 from scrapy import signals
 import unit.userAgents as userAgents
-from unit.proxyMysql import sqlHelper
 
 
 class LagouSpiderMiddleware(object):

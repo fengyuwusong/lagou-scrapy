@@ -42,29 +42,3 @@ class LagouPipeline(object):
         sql.insert(item['name'], item['salary'], item['require'], item['tag'], item['companyName'], item['companyType'],
                    item['location'], item['keyWord'], item['day'])
         return item
-        # today = time.strftime("%Y%m%d", time.localtime())
-        # fileName = today + ".txt"
-        # with open(fileName, 'a', encoding='utf8') as fp:
-        #     fp.write(item['name'] + '\t')
-        #     fp.write(item['salary'] + '\t')
-        #     fp.write(item['require'] + '\t')
-        #     fp.write(item['tag'] + '\t')
-        #     fp.write(item['companyName'] + '\t')
-        #     fp.write(item['companyType'] + '\t')
-        #     fp.write(item['location'] + '\t')
-        #     fp.write(item['keyWord'] + '\t')
-        #     fp.write(item['day'] + '\t')
-        # fp.write("\n")
-if __name__ == '__main__':
-    sql = sqlHelper("localhost", "root", "admin", "lagou")
-    item={'companyName': '分乐惠',
-          'companyType': '移动互联网,数据服务 / 不需要融资',
-          'day': '1天前发布',
-          'keyWord': '“项目分成”',
-          'location': '天津·王顶堤',
-          'name': 'JAVA',
-          'require': '经验3-5年 / 本科',
-          'salary': '10K-20K',
-          'tag': "['C#/.NET', 'Node.js']"}
-    sql.insert(item['name'], item['salary'], item['require'], item['tag'], item['companyName'], item['companyType'],
-               item['location'], item['keyWord'], item['day'])
